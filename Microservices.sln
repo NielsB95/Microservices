@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{08E832D1-4EE7-4184-8449-4AF25AB0569C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccountService", "AccountService", "{61F9FFFE-69F3-4557-961F-C8B0D6A398F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts", "AccountService\Accounts\Accounts.csproj", "{B03B3AA6-1FAE-4A76-AE03-0CE25F92D902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.Tests", "AccountService\Accounts.Tests\Accounts.Tests.csproj", "{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08E832D1-4EE7-4184-8449-4AF25AB0569C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E832D1-4EE7-4184-8449-4AF25AB0569C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E832D1-4EE7-4184-8449-4AF25AB0569C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E832D1-4EE7-4184-8449-4AF25AB0569C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03B3AA6-1FAE-4A76-AE03-0CE25F92D902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03B3AA6-1FAE-4A76-AE03-0CE25F92D902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03B3AA6-1FAE-4A76-AE03-0CE25F92D902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03B3AA6-1FAE-4A76-AE03-0CE25F92D902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B03B3AA6-1FAE-4A76-AE03-0CE25F92D902} = {61F9FFFE-69F3-4557-961F-C8B0D6A398F9}
+		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7} = {61F9FFFE-69F3-4557-961F-C8B0D6A398F9}
+	EndGlobalSection
+EndGlobal
