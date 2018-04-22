@@ -7,4 +7,4 @@ install:
 
 script:
 - dotnet build
-- dotnet test
+- dotnet test Microservices/AccountService/Accounts.Tests/Accounts.Tests.csproj
