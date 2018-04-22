@@ -9,11 +9,5 @@ namespace Accounts.Tests
         public void TestMethod1()
         {
         }
-
-        [TestMethod]
-        public void FailingTest()
-        {
-            Assert.IsTrue(true);
-        }
     }
 }
