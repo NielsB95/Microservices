@@ -8,8 +8,18 @@ namespace Accounts.Data
     {
         public DbSet<Account> Accounts { get; set; }
 
+        public AccountContext()
+        { }
+
         public AccountContext(DbContextOptions<AccountContext> options) : base(options)
+        { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseInMemoryDatabase("AccountsDB");
+            }
         }
     }
 }

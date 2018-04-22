@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  accounts:
+    image: accounts
+    build:
+      context: .
+      dockerfile: AccountService/Accounts/Dockerfile

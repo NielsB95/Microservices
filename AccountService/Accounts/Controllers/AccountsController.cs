@@ -11,19 +11,13 @@ namespace Accounts.Controllers
     [Route("Accounts")]
     public class AccountsController : Controller
     {
-        private AccountContext _context { get; set; }
-
-        public AccountsController(AccountContext context)
+        [HttpGet]
+        public IEnumerable<Account> GetAll()
         {
-            this._context = context;
-
-            var niels = new Account()
+            using (var context = new AccountContext())
             {
-                Username = "Niels",
-                PasswordHash = "$%^&*()"
-            };
-            this._context.Accounts.Add(niels);
-            this._context.SaveChanges();
+                return context.Accounts.ToList();
+            }
         }
     }
 }

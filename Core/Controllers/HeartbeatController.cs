@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("heartbeat")]
     public class ValuesController : Controller
     {
-
+        [HttpGet]
+        public string Heartbeat()
+        {
+            return "Het werkt!";
+        }
     }
 }
