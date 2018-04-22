@@ -287,5 +287,8 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-# Ignore MacOS files
+# MacOS files
 .DS_Store
+
+# Visual Studio Code
+.vscode
