@@ -1,2 +1,5 @@
 language: csharp
 solution: Microservices.sln
+script:
+ - dotnet build
+ - dotnet test MTAServiceStatus.Tests/MTAServiceStatus.Tests.csproj
