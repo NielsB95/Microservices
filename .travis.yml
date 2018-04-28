@@ -1,7 +1,7 @@
 language: csharp
 solution: Microservices.sln
 mono: none
-dotnet: latest
+dotnet: 2.1.105
 
 install:
 - dotnet restore Microservices.sln
