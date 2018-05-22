@@ -1,7 +1,12 @@
 language: csharp
 solution: Microservices.sln
 mono: none
-dotnet: 2.1.300-preview2-008530
+dotnet: 2.1.100
+
+before_install:
+- sudo apt-get install apt-transport-https
+- sudo apt-get update
+- sudo apt-get install dotnet-sdk-2.1.300-rc1-008673
 
 install:
 - dotnet restore Microservices.sln
