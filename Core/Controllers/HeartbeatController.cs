@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core.Controllers
 {
-    [Route("heartbeat")]
+    [Route("core/heartbeat")]
     public class ValuesController : Controller
     {
         [HttpGet]
