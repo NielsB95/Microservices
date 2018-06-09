@@ -9,6 +9,7 @@
     <Folder Include="Logic\" />
     <Folder Include="Authentication\" />
     <Folder Include="Authentication\Tokens\" />
+    <Folder Include="Util\" />
   </ItemGroup>
 
   <ItemGroup>

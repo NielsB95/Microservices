@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Core.Controllers
 {
@@ -10,9 +6,23 @@ namespace Core.Controllers
     public class ValuesController : Controller
     {
         [HttpGet]
-        public string Heartbeat()
+        public object Heartbeat()
         {
-            return "Het werkt!";
+            return new
+            {
+                Timestamp = Util.Date.Timestamp
+            };
+        }
+
+        [HttpGet("Info")]
+        public object ServiceInfo()
+        {
+            return new
+            {
+                Timestamp = Util.Date.Timestamp,
+                Name = System.AppDomain.CurrentDomain.FriendlyName,
+                IP = Util.Network.LocalIPAddress
+            };
         }
     }
 }
