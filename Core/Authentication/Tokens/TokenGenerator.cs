@@ -1,12 +1,11 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using Core.Logic;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Accounts.Logic
+namespace Core.Authentication.Tokens
 {
-    public class Tokens
+    public class TokenGenerator
     {
         public static string GenerateToken(string username, int expireMinutes = 20)
         {

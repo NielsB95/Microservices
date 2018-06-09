@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Accounts.Logic;
-using Core.Logic;
+using Core.Authentication.Tokens;
 
 namespace Accounts.Controllers.Api
 {
@@ -16,7 +15,7 @@ namespace Accounts.Controllers.Api
             if (_username != username || _password != password)
                 return null;
 
-            return Tokens.GenerateToken(username);
+            return TokenGenerator.GenerateToken(username);
         }
 
         [HttpPost("Validate")]

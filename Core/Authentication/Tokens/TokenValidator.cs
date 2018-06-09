@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Core.Logic
+namespace Core.Authentication.Tokens
 {
     public class TokenValidator
     {
@@ -19,9 +19,11 @@ namespace Core.Logic
             username = null;
 
             var simplePrinciple = GetPrincipal(token);
-            var identity = simplePrinciple.Identity as ClaimsIdentity;
 
-            if (identity == null)
+            if (simplePrinciple == null)
+                return false;
+
+            if (!(simplePrinciple.Identity is ClaimsIdentity identity))
                 return false;
 
             if (!identity.IsAuthenticated)
@@ -38,14 +40,17 @@ namespace Core.Logic
             return true;
         }
 
+
+
+
+
         private static ClaimsPrincipal GetPrincipal(string token)
         {
             try
             {
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var jwtToken = tokenHandler.ReadToken(token) as JwtSecurityToken;
 
-                if (jwtToken == null)
+                if (!(tokenHandler.ReadToken(token) is JwtSecurityToken jwtToken))
                     return null;
 
                 var symmetricKey = Convert.FromBase64String(secret);
@@ -64,9 +69,9 @@ namespace Core.Logic
                 return principal;
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
-                //should write log
+                Console.WriteLine(e.Message);
                 return null;
             }
         }
