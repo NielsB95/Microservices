@@ -24,5 +24,15 @@ namespace Core.Controllers
                 IP = Util.Network.LocalIPAddress
             };
         }
+
+        [HttpGet("Load")]
+        public object Load()
+        {
+            return new
+            {
+                LastMin = 25,
+                Last10Min = 500
+            };
+        }
     }
 }
