@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Core.Authentication.Tokens
 {
-    public class TokenGenerator
+    public static class TokenGenerator
     {
         public static string GenerateToken(string username, int expireMinutes = 20)
         {

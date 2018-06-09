@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Core.Authentication.Tokens
 {
-    public class TokenValidator
+    public static class TokenValidator
     {
         /// <summary>
         /// Use the below code to generate symmetric Secret Key
@@ -39,10 +39,6 @@ namespace Core.Authentication.Tokens
 
             return true;
         }
-
-
-
-
 
         private static ClaimsPrincipal GetPrincipal(string token)
         {
