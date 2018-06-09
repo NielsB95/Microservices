@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts", "AccountService\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.Tests", "AccountService\Accounts.Tests\Accounts.Tests.csproj", "{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{163E6EEC-17D2-47C1-9517-4C8EFE6FD24A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3041DF63-2229-4DBE-9B5B-CC5FF14C0DE7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{163E6EEC-17D2-47C1-9517-4C8EFE6FD24A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{163E6EEC-17D2-47C1-9517-4C8EFE6FD24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{163E6EEC-17D2-47C1-9517-4C8EFE6FD24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{163E6EEC-17D2-47C1-9517-4C8EFE6FD24A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B03B3AA6-1FAE-4A76-AE03-0CE25F92D902} = {61F9FFFE-69F3-4557-961F-C8B0D6A398F9}
