@@ -24,10 +24,4 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="Dockerfile" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Logic\Tokens.cs" />
-  </ItemGroup>
 </Project>
