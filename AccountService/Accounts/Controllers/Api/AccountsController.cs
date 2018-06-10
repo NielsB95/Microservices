@@ -10,12 +10,11 @@ namespace Accounts.Controllers.Api
     public class AccountsController : Controller
     {
         [HttpGet]
-        public IEnumerable<string> GetAll()
+        public IEnumerable<Account> GetAll()
         {
-            using (var context = new AccountContext())
+            using (var context = ContextFactory.CreateContext())
             {
                 return context.Accounts
-                              .Select(x => x.Username)
                               .ToList();
             }
         }

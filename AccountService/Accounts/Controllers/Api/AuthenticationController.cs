@@ -1,21 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Core.Authentication.Tokens;
+using Accounts.Data;
+using System.Linq;
 
 namespace Accounts.Controllers.Api
 {
     [Route("api")]
-    public class AuthenticationController
+    public class AuthenticationController : Controller
     {
-        private readonly string _username = "niels";
-        private readonly string _password = "niels";
-
         [HttpPost("LogOn")]
-        public string LogOn(string username, string password)
+        public IActionResult LogOn(string username, string password)
         {
-            if (_username != username || _password != password)
-                return null;
-
-            return TokenGenerator.GenerateToken(username);
+            // TODO: Extract database query.
+            var isValid = ContextFactory.CreateContext()
+                                        .Accounts
+                                        .Where(x => x.Username == username)
+                                        .Where(x => x.PasswordHash == password)
+                                        .Any();
+            if (isValid)
+                return Ok(TokenGenerator.GenerateToken(username));
+            else
+                return Unauthorized();
         }
 
         [HttpPost("Validate")]
