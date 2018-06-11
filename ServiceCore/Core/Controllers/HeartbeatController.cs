@@ -6,23 +6,23 @@ namespace Core.Controllers
     public class ValuesController : Controller
     {
         [HttpGet]
-        public object Heartbeat()
+        public IActionResult Heartbeat()
         {
-            return new
+            return Ok(new
             {
                 Timestamp = Util.Date.Timestamp
-            };
+            });
         }
 
         [HttpGet("Info")]
-        public object ServiceInfo()
+        public IActionResult ServiceInfo()
         {
-            return new
+            return Ok(new
             {
                 Timestamp = Util.Date.Timestamp,
                 Name = System.AppDomain.CurrentDomain.FriendlyName,
                 IP = Util.Network.LocalIPAddress
-            };
+            });
         }
 
         [HttpGet("Load")]
