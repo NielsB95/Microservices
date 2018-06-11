@@ -12,7 +12,7 @@ namespace Core.Tests.Authentication.Tokens
         {
             var token = TokenGenerator.GenerateToken("John Joe");
             Assert.IsTrue(TokenValidator.ValidateToken(token, out string username));
-            Assert.AreSame("John Joe", username);
+            Assert.AreEqual("John Joe", username);
         }
     }
 }
