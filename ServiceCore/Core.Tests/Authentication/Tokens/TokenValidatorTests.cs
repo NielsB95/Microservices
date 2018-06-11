@@ -29,7 +29,7 @@ namespace Core.Tests.Authentication.Tokens
             var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImpvaG4iLCJyb2xlIjoiQWRtaW4iLCJuYW1laWQiOiIxIiwibmJmIjoxNTI4NzM2NzY2LCJleHAiOjE1Mjg3Mzc5NjYsImlhdCI6MTUyODczNjc2Nn0.7GsgZH5zYEW6L4F-2QbWDIZBvNvGTVzGmdI7EhoRvQA";
             var result = TokenValidator.ValidateToken(token, out string username);
             Assert.IsFalse(result);
-            Assert.AreEqual("john", username);
+            Assert.IsNull(username);
         }
     }
 }
