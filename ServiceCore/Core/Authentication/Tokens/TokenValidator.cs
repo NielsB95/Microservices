@@ -12,12 +12,11 @@ namespace Core.Authentication.Tokens
         ///     var hmac = new HMACSHA256();
         ///     var key = Convert.ToBase64String(hmac.Key);
         /// </summary>
-        public const string secret = "OTYXD0qX8I5qY0ti3CUy5YsMG9wmPr+0uRMoun7lc4Q7pbSWDksxUzqQg1HrKc6Ubq2eiM7L+U5BIJQOHHRqvg==";
+        public static string secret = CoreSettings.Secret;
 
         public static bool ValidateToken(string token, out string username)
         {
             username = null;
-
             var simplePrinciple = GetPrincipal(token);
 
             if (simplePrinciple == null)
