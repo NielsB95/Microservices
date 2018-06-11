@@ -19,6 +19,10 @@ namespace Core.Tests.Authentication.Tokens
             Assert.AreEqual("John Joe", username);
         }
 
+        /// <summary>
+        /// This test contains an expired token. This test will check if this token is also
+        /// marked as expired.
+        /// </summary>
         [TestMethod]
         public void ValidateExpiredTokenTest()
         {
