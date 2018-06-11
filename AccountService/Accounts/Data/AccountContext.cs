@@ -18,12 +18,7 @@ namespace Accounts.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // TODO: Move this to a settings file
-            var sqlitePath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
-                      @"../Documents/Databases/Accounts.db");
-
-            optionsBuilder.UseSqlite("Data source =" + sqlitePath);
+            optionsBuilder.UseSqlite(CoreSettings.ConnectionString);
         }
     }
 }

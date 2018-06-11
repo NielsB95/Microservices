@@ -26,4 +26,12 @@
   <ItemGroup>
     <ProjectReference Include="..\..\ServiceCore\Core\Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Settings.default.json" />
+    <Content Remove="Settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.default.json" />
+    <None Include="Settings.json" />
+  </ItemGroup>
 </Project>

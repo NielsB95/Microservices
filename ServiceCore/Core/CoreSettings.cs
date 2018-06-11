@@ -18,11 +18,10 @@ namespace Core
         }
 
         /// <summary>
-        /// Gets the secret which will be used for authentication. No access modifier, because
-        /// this key needs to stay within this library.
+        /// Gets the secret which will be used for authentication.
         /// </summary>
         /// <value>The secret.</value>
-        static string Secret
+        public static string Secret
         {
             get
             {
