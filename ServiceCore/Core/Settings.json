@@ -1,0 +1,8 @@
+﻿{
+  "Authentication": {
+    "Secret": "OTYXD0qX8I5qY0ti3CUy5YsMG9wmPr+0uRMoun7lc4Q7pbSWDksxUzqQg1HrKc6Ubq2eiM7L+U5BIJQOHHRqvg=="
+  },
+  "Database": {
+    "ConnectionString": "Data source=/Users/Niels/Documents/Databases/Accounts.db"
+  }
+}
