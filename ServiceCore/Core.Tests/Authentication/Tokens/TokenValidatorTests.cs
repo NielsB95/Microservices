@@ -7,6 +7,10 @@ namespace Core.Tests.Authentication.Tokens
     [TestClass]
     public class TokenValidatorTests
     {
+        /// <summary>
+        /// This test will generate a new token and immidiatly validate it. We only want to
+        /// generate tokens that are valid.
+        /// </summary>
         [TestMethod]
         public void ValidateValidTokenTest()
         {
