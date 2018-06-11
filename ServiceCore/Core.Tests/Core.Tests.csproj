@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Authentication\" />
+    <Folder Include="Authentication\Tokens\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="UnitTest1.cs" />
