@@ -15,7 +15,6 @@ script:
 - dotnet test ServiceCore/Core.Tests/Core.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 - dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 - curl -s https://codecov.io/bash > codecov
-
-# - chmod +x codecov
-# - ./codecov -f ./AccountService/Accounts.Tests/coverage.json
-# - ./codecov -f ./ServiceCore/Core.Tests/coverage.json
+- chmod +x codecov
+- ./codecov -f ./AccountService/Accounts.Tests/coverage.json -t 02cb0234-857a-40a3-a825-1fd53ca0c75e
+- ./codecov -f ./ServiceCore/Core.Tests/coverage.json -t 02cb0234-857a-40a3-a825-1fd53ca0c75e
