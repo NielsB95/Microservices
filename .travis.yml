@@ -3,9 +3,6 @@ solution: Microservices.sln
 mono: none
 dotnet: 2.1.300
 
-before_install:
-- dotnet add Microservices.sln package coverlet.msbuild
-
 install:
 - dotnet restore Microservices.sln
 
