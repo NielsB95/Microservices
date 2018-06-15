@@ -4,7 +4,7 @@ mono: none
 dotnet: 2.1.300
 
 before_install:
-- dotnet add package coverlet.msbuild  
+- dotnet add ServiceCore/Core.Tests/Core.Tests.csproj package coverlet.msbuild  
 
 install:
 - dotnet restore Microservices.sln
@@ -12,5 +12,5 @@ install:
 script:
 - dotnet build Microservices.sln
 - dotnet test ServiceCore/Core.Tests/Core.Tests.csproj /p:CollectCoverage=true
-- dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj /p:CollectCoverage=true
+- dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj
 - bash <(curl -s https://codecov.io/bash)
