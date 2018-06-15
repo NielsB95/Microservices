@@ -2,6 +2,10 @@ language: csharp
 solution: Microservices.sln
 mono: none
 dotnet: 2.1.300
+env:
+  global:
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+    - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
 install:
 - dotnet restore Microservices.sln
@@ -10,4 +14,7 @@ script:
 - dotnet build Microservices.sln
 - dotnet test ServiceCore/Core.Tests/Core.Tests.csproj /p:CollectCoverage=true
 - dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj /p:CollectCoverage=true
-- bash <(curl -s https://codecov.io/bash)
+- curl -s https://codecov.io/bash > codecov
+- chmod +x codecov
+- ./codecov -f ./AccountService/Accounts.Tests/coverage.json
+- ./codecov -f ./ServiceCore/Core.Tests/coverage.json
