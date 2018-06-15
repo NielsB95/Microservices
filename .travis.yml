@@ -1,22 +1,16 @@
 language: csharp
 solution: Microservices.sln
-sudo: required
+mono: none
 dotnet: 2.1.300
 
 before_install:
-- wget --no-check-certificate https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+- dotnet add package coverlet.msbuild  
 
 install:
-- mono ./nuget.exe install NUnit.Runners -Version 3.0.1 -OutputDirectory testrunner
 - dotnet restore Microservices.sln
 
 script:
 - dotnet build Microservices.sln
-- dotnet test ServiceCore/Core.Tests/Core.Tests.csproj
-- dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj
-- make compile test
-
-after_script:
-  - make coverage
-  - bash <(curl -s https://codecov.io/bash)
-
+- dotnet test ServiceCore/Core.Tests/Core.Tests.csproj /p:CollectCoverage=true
+- dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj /p:CollectCoverage=true
+- bash <(curl -s https://codecov.io/bash)
