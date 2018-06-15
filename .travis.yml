@@ -10,3 +10,4 @@ script:
 - dotnet build Microservices.sln
 - dotnet test ServiceCore/Core.Tests/Core.Tests.csproj
 - dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj
+- bash <(curl -s https://codecov.io/bash)
