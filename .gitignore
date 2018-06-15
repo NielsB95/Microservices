@@ -297,3 +297,4 @@ __pycache__/
 Settings.json
 
 coverage.json
+coverage.opencover.xml
