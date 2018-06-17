@@ -6,10 +6,23 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\ServiceCore\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.json" />
+  </ItemGroup>
 </Project>

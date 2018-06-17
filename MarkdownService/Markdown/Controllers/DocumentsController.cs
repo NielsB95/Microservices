@@ -8,8 +8,7 @@ using System;
 namespace Markdown.Controllers
 {
     [Route("[controller]")]
-    [ApiController]
-    public class DocumentController : ControllerBase
+    public class DocumentsController : Controller
     {
         [HttpGet]
         public ActionResult<IEnumerable<Document>> Get()
