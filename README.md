@@ -1,5 +1,4 @@
-# Microservices [![Build Status](https://travis-ci.org/NielsB95/Microservices.svg?branch=master)](https://travis-ci.org/NielsB95/Microservices)[![codecov](https://codecov.io/gh/NielsB95/Microservices/branch/master/graph/badge.svg)](https://codecov.io/gh/NielsB95/Microservices)
-
+# Microservices [![Build Status](https://travis-ci.org/NielsB95/Microservices.svg?branch=master)](https://travis-ci.org/NielsB95/Microservices)
 In this repository, I will work out different concepts regarding microservices. While creating these services I hope to get a better understanding of how microservices work and what it takes to develop them.
 
 - [X] Core<br/>
