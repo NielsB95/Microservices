@@ -25,9 +25,11 @@ namespace Markdown.Controllers
         {
             using (var context = new MarkdownContext())
             {
-                return context.Documents
-                              .Where(x => x.ID == id)
-                              .FirstOrDefault();
+                var y = context.Documents
+                               .Where(x => x.ID.ToString().Equals(id.ToString()))
+                               .ToList()
+                               .FirstOrDefault();
+                return y;
             }
         }
     }
