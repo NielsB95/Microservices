@@ -20,4 +20,5 @@ script:
 
 # Go to the MarkdwonGUI-folder and build the app.
 - cd MarkdownService/Markdown.GUI/
+- npm install
 - npm run build
