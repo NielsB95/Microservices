@@ -40,8 +40,10 @@ namespace Markdown
                 app.UseHsts();
             }
 
-            app.UseCors(builder =>
-                        builder.AllowAnyOrigin());
+            app.UseCors(builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
 
             app.UseMvc();
         }

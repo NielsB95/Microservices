@@ -16,6 +16,12 @@ namespace Markdown.Controllers
             using (var context = new MarkdownContext())
             {
                 return context.Documents
+                              .Select(x => new Document
+                              {
+                                  ID = x.ID,
+                                  Name = x.Name,
+                                  CreatedAt = x.CreatedAt
+                              })
                               .ToList();
             }
         }

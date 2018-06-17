@@ -1,11 +1,20 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+	<div>
+		<navigation></navigation>
+		<div id="app">
+			<b-container>
+				<router-view></router-view>
+			</b-container>
+		</div>
+	</div>
 </template>
 
 <script>
+import Navigation from "@/components/blocks/navigation";
 export default {
-  name: "app"
+  name: "app",
+  components: {
+    navigation: Navigation
+  }
 };
 </script>

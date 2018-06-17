@@ -15,7 +15,7 @@
 import showdown from "showdown";
 
 export default {
-  name: "hello",
+  name: "ReadDocument",
   data() {
     return {
       id: "",
@@ -23,7 +23,7 @@ export default {
       md: ""
     };
   },
-  created() {
+  mounted() {
     this.id = this.$route.params.docid;
     fetch(Settings.BaseUrl + "/documents/" + this.id)
       .then(response => {
