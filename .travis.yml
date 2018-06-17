@@ -15,3 +15,7 @@ script:
 - dotnet test ServiceCore/Core.Tests/Core.Tests.csproj /p:CollectCoverage=true
 - dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj /p:CollectCoverage=true
 - dotnet test MarkdownService/Markdown.Tests/Markdown.Tests.csproj /p:CollectCoverage=true
+
+# Go to the MarkdwonGUI-folder and build the app.
+- cd MarkdownService/Markdown.GUI/
+- npm run build
