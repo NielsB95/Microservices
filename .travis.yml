@@ -14,3 +14,4 @@ script:
 - dotnet build Microservices.sln
 - dotnet test ServiceCore/Core.Tests/Core.Tests.csproj /p:CollectCoverage=true
 - dotnet test AccountService/Accounts.Tests/Accounts.Tests.csproj /p:CollectCoverage=true
+- dotnet test MarkdownService/Markdown.Tests/Markdown.Tests.csproj /p:CollectCoverage=true
