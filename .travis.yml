@@ -2,6 +2,8 @@ language: csharp
 solution: Microservices.sln
 mono: none
 dotnet: 2.1.300
+node_js: 6.1.0
+
 env:
   global:
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
