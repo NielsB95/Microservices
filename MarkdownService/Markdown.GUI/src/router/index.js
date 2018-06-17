@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/components/Home";
-import ReadDoc from "@/components/ReadDocument";
+import ReadDocument from "@/components/ReadDocument";
+import EditDocument from "@/components/EditDocument";
 
 Vue.use(Router);
 
@@ -15,7 +16,12 @@ export default new Router({
         {
             path: "/document/:docid",
             name: "ReadDocument",
-            component: ReadDoc
+            component: ReadDocument
+        },
+        {
+            path: "/document/:docid/edit",
+            name: "EditDocument",
+            component: EditDocument
         }
     ]
 });

@@ -19,7 +19,7 @@ namespace Markdown.Controllers
                               .Select(x => new Document
                               {
                                   ID = x.ID,
-                                  Name = x.Name,
+                                  Title = x.Title,
                                   CreatedAt = x.CreatedAt
                               })
                               .ToList();
@@ -31,11 +31,21 @@ namespace Markdown.Controllers
         {
             using (var context = new MarkdownContext())
             {
-                var y = context.Documents
+                return context.Documents
                                .Where(x => x.ID.ToString().Equals(id.ToString()))
                                .ToList()
                                .FirstOrDefault();
-                return y;
+            }
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult<Document> PostDocument(Document document)
+        {
+            using (var context = new MarkdownContext())
+            {
+                // context.Documents.Update(document);
+
+                return document;
             }
         }
     }

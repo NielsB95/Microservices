@@ -10,7 +10,7 @@ namespace Markdown.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ID { get; set; }
-        public string Name { get; set; }
+        public string Title { get; set; }
         public string Markdown { get; set; }
         public string CreatedAt { get; set; }
     }

@@ -1,19 +1,30 @@
 <template>
-	<div>
-		<h2>Your documents</h2>
-		<b-table :items=documents :fields="documentFields">
-			<template slot="actions" slot-scope="data">
-				<div class="float-right">
-					<b-btn variant="light" class="pointer">
-						<a href=""><span class="fa fa-edit"></span></a>
-					</b-btn>
-					<b-btn variant="light" class="pointer">
-						<router-link :to="{ name: 'ReadDocument', params: { docid: data.item.id }}"><span class="fa fa-eye"></span></router-link>
-					</b-btn>
-				</div>
-			</template>
-		</b-table>
-	</div>
+	<b-container>
+		<b-row>
+			<b-col md=12>
+				<h2>Your documents</h2>
+			</b-col>
+			<b-col md=12>
+				<b-row v-for="doc in documents" v-bind:key="doc.id">
+						<b-col offset-md="1" md="8">
+							{{doc.title}}
+						</b-col>
+						<b-col md="3" class="float-right">
+							<router-link :to="{ name: 'EditDocument', params: { docid: doc.id }}">
+								<b-btn variant="light" class="pointer">
+									<span class="fa fa-edit"></span>
+								</b-btn>
+							</router-link>
+							<router-link :to="{ name: 'ReadDocument', params: { docid: doc.id }}">
+								<b-btn variant="light" class="pointer">
+									<span class="fa fa-eye"></span>
+								</b-btn>
+							</router-link>
+						</b-col>
+				</b-row>
+			</b-col>
+		</b-row>
+	</b-container>
 </template>
 
 <script>
@@ -33,7 +44,7 @@ export default {
     return {
       documents: [],
       documentFields: [
-        { key: "name", label: "" },
+        { key: "title", label: "" },
         { key: "actions", label: "" }
       ]
     };

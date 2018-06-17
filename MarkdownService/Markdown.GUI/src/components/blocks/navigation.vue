@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <b-navbar toggleable="md" type="dark" variant="primary">
+        <b-navbar toggleable="md" type="dark" variant="info" sticky>
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-navbar-brand href="#/">Markdown</b-navbar-brand>
 
@@ -33,5 +33,9 @@ export default {
 <style scoped>
 .header {
   padding-bottom: 2em;
+}
+
+.navbar-custom {
+  background-color: #ff5500;
 }
 </style>

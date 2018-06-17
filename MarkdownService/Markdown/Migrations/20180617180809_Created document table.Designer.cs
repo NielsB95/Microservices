@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Markdown.Migrations
 {
     [DbContext(typeof(MarkdownContext))]
-    [Migration("20180617133052_Added document table")]
-    partial class Addeddocumenttable
+    [Migration("20180617180809_Created document table")]
+    partial class Createddocumenttable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,11 +23,11 @@ namespace Markdown.Migrations
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreatedAt");
+                    b.Property<string>("CreatedAt");
 
                     b.Property<string>("Markdown");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Title");
 
                     b.HasKey("ID");
 

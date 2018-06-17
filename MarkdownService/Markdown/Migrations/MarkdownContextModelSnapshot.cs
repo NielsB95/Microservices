@@ -21,11 +21,11 @@ namespace Markdown.Migrations
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreatedAt");
+                    b.Property<string>("CreatedAt");
 
                     b.Property<string>("Markdown");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Title");
 
                     b.HasKey("ID");
 

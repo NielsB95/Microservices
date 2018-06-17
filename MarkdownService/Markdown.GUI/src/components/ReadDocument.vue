@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<b-container>
     	<b-row>
 			<b-col offset-lg="2" lg="8" offset-md="1" md="10" sm=12>
 				<div>
@@ -9,7 +9,7 @@
 				</div>
 			</b-col>
     	</b-row>
-  	</div>
+	</b-container>
 </template>
 <script>
 import showdown from "showdown";
@@ -31,9 +31,8 @@ export default {
       })
       .then(responseBody => {
         var data = JSON.parse(responseBody);
-        console.log(data);
         this.md = data.markdown;
-        this.title = data.name;
+        this.title = data.title;
       });
   },
   watch: {
