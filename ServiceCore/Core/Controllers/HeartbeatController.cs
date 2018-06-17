@@ -2,10 +2,10 @@
 
 namespace Core.Controllers
 {
-    [Route("core/heartbeat")]
+    [Route("core")]
     public class ValuesController : Controller
     {
-        [HttpGet]
+        [HttpGet("heartbeat")]
         public IActionResult Heartbeat()
         {
             return Ok(new
@@ -14,7 +14,7 @@ namespace Core.Controllers
             });
         }
 
-        [HttpGet("Info")]
+        [HttpGet("info")]
         public IActionResult ServiceInfo()
         {
             return Ok(new
@@ -25,7 +25,7 @@ namespace Core.Controllers
             });
         }
 
-        [HttpGet("Load")]
+        [HttpGet("load")]
         public object Load()
         {
             return new

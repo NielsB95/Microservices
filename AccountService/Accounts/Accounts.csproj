@@ -35,4 +35,7 @@
     <None Include="Settings.default.json" />
     <None Include="Settings.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\Api\AccountsController.cs" />
+  </ItemGroup>
 </Project>
