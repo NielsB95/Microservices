@@ -29,6 +29,7 @@
   <ItemGroup>
     <Content Remove="Settings.default.json" />
     <Content Remove="Settings.json" />
+    <Content Remove="wwwroot\index.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Settings.default.json" />
